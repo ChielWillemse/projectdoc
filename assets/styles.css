@@ -1,0 +1,72 @@
+/* Algemene stijlen */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+    line-height: 1.5;
+    color: #63d866;
+}
+
+body {
+    background-color: #000;
+    color: #63d866;
+    font-size: 16px;
+    overflow-x: hidden;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+
+
+
+/* Horizontale afbeeldingen iets groter tonen */
+.image-gallery img.landscape {
+    width: 36%;
+    max-width: 420px;
+}
+
+
+.image-gallery {
+    display: flex;
+    justify-content: flex-start; /* links uitlijnen */
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: nowrap; /* voorkomt dat ze onder elkaar komen */
+    overflow-x: auto; /* horizontaal scrollen als het niet past */
+    margin: 30px 0 80px;
+    padding-bottom: 10px;
+}
+
+/* Basisstijl voor afbeeldingen */
+.image-gallery img {
+    flex: 0 0 auto; /* voorkomt dat ze krimpen */
+    width: 35%;
+    max-width: 220px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(99, 216, 102, 0.25);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover-effect */
+.image-gallery img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 0 15px rgba(99, 216, 102, 0.4);
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+}
